@@ -80,6 +80,35 @@ To release a user reservation, run `cancel-resy.py` with the `--id` parameter sp
 python cancel-resy.py --id your_unique_host_id
 ```
 
+### Examples
+
+#### reserve a new user account
+```
+[root@601328d95541 vault-resy]# python3 make-resy.py --id host123
+Reserved user: {'username': 'user1', 'password': 'pass1', 'id': 'host123'}
+```
+
+
+#### try to reserve a user when all accounts already reserved
+```
+[root@601328d95541 vault-resy]# python3 make-resy.py --id host456
+No unreserved user found.
+```
+
+
+#### return a user account to the pool 
+```
+[root@601328d95541 vault-resy]# python3 cancel-resy.py --id host123
+Released user: {'username': 'user1', 'path': 'dynatraceuser1'}
+```
+
+
+#### try to return a user account from a host without a reservation
+```
+[root@601328d95541 vault-resy]# python3 cancel-resy.py --id host456
+No reserved user found with the specified ID.
+```
+
 ## Contributing
 
 Contributions to improve the scripts or documentation are welcome. Please follow the standard GitHub pull request process to submit your changes.

@@ -13,7 +13,7 @@ client = hvac.Client(
     token=os.getenv('VAULT_TOKEN')  # export VAULT_TOKEN=secret
 )
 
-def release_reserved_user(base_path='saasuser', host_id=None, user_count=1):
+def release_reserved_user(base_path='saasuser', host_id=None, user_count=1): # Todo: handle user_count better
     """
     Release a user reserved by the specified host ID.
 

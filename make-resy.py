@@ -13,7 +13,7 @@ client = hvac.Client(
     token=os.getenv('VAULT_TOKEN')  # export VAULT_TOKEN=secret
 )
 
-def find_and_reserve_user(base_path='saasuser', host_id=None, user_count=1):
+def find_and_reserve_user(base_path='saasuser', host_id=None, user_count=1): # Todo: handle user_count better
     """
     Find an unreserved user and mark it as reserved.
 

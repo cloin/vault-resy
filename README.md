@@ -99,7 +99,7 @@ No unreserved user found.
 #### return a user account to the pool 
 ```
 [root@601328d95541 vault-resy]# python3 cancel-resy.py --id host123
-Released user: {'username': 'user1', 'path': 'dynatraceuser1'}
+Released user: {'username': 'user1', 'path': 'saasuser1'}
 ```
 
 
